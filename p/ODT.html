@@ -20,30 +20,35 @@
     var CONFIG = {"hostname":"wincer.icu","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#836FFF","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="技术·日常">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wincer&#39;s blog">
-<meta property="og:url" content="http://wincer.icu/index.html">
+  <meta name="description" content="珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种像珂朵莉挥剑一样暴力的暴力算法，吊打线段树，暴踩标算，迅速AK IOI 至于我学习的原因，一是它作为一种非常牛逼的暴力算法，甚至可以$\text{AC}$某些题；二是出于信仰，据不可靠研究表明，研究珂学对于OIer帮助极大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="珂朵莉树学习笔记">
+<meta property="og:url" content="http://wincer.icu/p/ODT.html">
 <meta property="og:site_name" content="Wincer&#39;s blog">
-<meta property="og:description" content="技术·日常">
+<meta property="og:description" content="珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种像珂朵莉挥剑一样暴力的暴力算法，吊打线段树，暴踩标算，迅速AK IOI 至于我学习的原因，一是它作为一种非常牛逼的暴力算法，甚至可以$\text{AC}$某些题；二是出于信仰，据不可靠研究表明，研究珂学对于OIer帮助极大">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-service.csdnimg.cn/img_convert/65e2372d0cf6a0a465b9360ead71867c.png">
+<meta property="article:published_time" content="2021-08-13T10:31:23.000Z">
+<meta property="article:modified_time" content="2021-08-19T13:16:31.498Z">
 <meta property="article:author" content="Wincer">
+<meta property="article:tag" content="珂朵莉树">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-service.csdnimg.cn/img_convert/65e2372d0cf6a0a465b9360ead71867c.png">
 
-<link rel="canonical" href="http://wincer.icu/">
+<link rel="canonical" href="http://wincer.icu/p/ODT.html">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Wincer's blog</title>
+  <title>珂朵莉树学习笔记 | Wincer's blog</title>
   
 
 
@@ -194,255 +199,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wincer.icu/p/Hello,World!.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Wincer">
-      <meta itemprop="description" content="技术·日常">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wincer's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/Hello,World!.html" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-          
-	            <i class="fa fa-thumb-tack"></i>
-	            <font color=7D26CD>置顶</font>
-	            <span class="post-meta-divider">|</span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-08-19 12:45:59 / 修改时间：21:17:06" itemprop="dateCreated datePublished" datetime="2021-08-19T12:45:59+08:00">2021-08-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url" rel="index"><span itemprop="name">杂谈</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/p/Hello,World!.html" class="post-meta-item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/p/Hello,World!.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/p/Hello,World!.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>599</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="Welcome-to-Wincer-s-Blog"><a href="#Welcome-to-Wincer-s-Blog" class="headerlink" title=" Welcome to Wincer's Blog!"></a><p><center> Welcome to Wincer's Blog!</center></p></h1><p>从去年疫情以来，对于这个博客我经历了各种思考和尝试。好的服务器、云空间太贵，低价的 VPS 和云空间不是速度慢就是限并发限 Idle，自己现在用的服务器也另有他用；尝试过WordPress和自行开发主题，但一是没有那么多精力自己写文件，二是对于很多语言还不懂……最后，我决定将这个朴实无华的小站放在了 Github 上。自建站以来，尝试过顺眼的主题，但配置太麻烦，功能不够齐全，可用性达不到要求，很多东西不兼容或是实现起来比较困难等等</p>
-<p>自从我去年3月份的第一次尝试以来，备考、升学……等等这些乱七八糟的事儿，一直处于一个比较繁忙的状态。同时我也算是处在人生的十字路口，思路和心态比较凌乱，一直没有顾上维护这个小站。<span class="hint--info hint--rounded hint--top" data-hint="2021/08/19" ontouchstart>今天</span>我再次重置了这个博客，尽管当时的许多设置和文章业已丢失，但总归是再次布置妥当了</p>
-<p>最近一段时间会尽力把之前想写的、丢失的博文补上。重开这个博客的另一个目的就是希望自己能总结、记录一些东西，顺便给现在有些失落的自己一个释放的空间</p>
-<p>顺便说一下，由于时间有限等多种因素，博文可能会写的很简略。如果您有幸阅读某一篇博文但却未能完全理解的话，充分利用搜索引擎和评论区可以事半功倍</p>
-<p>特别说明：文章在编写过程中将暂时关闭评论功能。如您发现未完成的文章中包含的错误，请用右下角的DaoVoice联络器或者左侧电邮与我联系，谢谢</p>
-<p>写在最后最后：</p>
-<h1 id="欢迎访问！您的支持是我最大的动力"><a href="#欢迎访问！您的支持是我最大的动力" class="headerlink" title="欢迎访问！您的支持是我最大的动力"></a><center>欢迎访问！您的支持是我最大的动力</center></h1>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wincer.icu/p/Hexo-Guide.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Wincer">
-      <meta itemprop="description" content="技术·日常">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wincer's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/Hexo-Guide.html" class="post-title-link" itemprop="url">Hexo博客搭建全面指南+基于NexT的优化</a>
-        </h2>
-
-        <div class="post-meta">
-          
-	            <i class="fa fa-thumb-tack"></i>
-	            <font color=7D26CD>置顶</font>
-	            <span class="post-meta-divider">|</span>
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-06 09:51:34" itemprop="dateCreated datePublished" datetime="2021-08-06T09:51:34+08:00">2021-08-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-19 21:17:00" itemprop="dateModified" datetime="2021-08-19T21:17:00+08:00">2021-08-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/p/Hexo-Guide.html" class="post-meta-item leancloud_visitors" data-flag-title="Hexo博客搭建全面指南+基于NexT的优化" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/p/Hexo-Guide.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/p/Hexo-Guide.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>10k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>9 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能</p>
-<p>而 $\text{NexT}$，则是一个集成有非常多功能、并且兼容性极好</p>
-<p>因此本文选择了 $\text{Hexo+NexT}$ 的搭配</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/Hexo-Guide.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -458,10 +218,9 @@
       <meta itemprop="name" content="Wincer's blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/ODT.html" class="post-title-link" itemprop="url">珂朵莉树学习笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          珂朵莉树学习笔记
+        </h1>
 
         <div class="post-meta">
           
@@ -536,42 +295,107 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种<del>像珂朵莉挥剑一样暴力的</del>暴力算法，吊打线段树，暴踩标算，<del>迅速AK IOI</del></p>
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>珂朵莉树（$\text{ODT}$），即$\text{Old Driver Tree}$（老司机树），是 $\text{lxl}$ 大佬创造出的一种<del>像珂朵莉挥剑一样暴力的</del>暴力算法，吊打线段树，暴踩标算，<del>迅速AK IOI</del></p>
 <p>至于我学习的原因，一是它作为一种非常牛逼的暴力算法，甚至可以$\text{AC}$某些题；二是出于信仰，据不可靠研究表明，研究珂学对于OIer帮助极大</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/ODT.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<span id="more"></span>
+<hr>
+<p>总结一下，珂朵莉树分为4个部分</p>
+<ul>
+<li>构造</li>
+<li>初始化</li>
+<li>Split（分裂）</li>
+<li>推平</li>
+</ul>
+<hr>
+<h1 id="珂朵莉树是什么"><a href="#珂朵莉树是什么" class="headerlink" title="珂朵莉树是什么"></a>珂朵莉树是什么</h1><p>珂朵莉树，又称 $\text{Old Driver Tree(ODT)}$（老司机树）</p>
+<p>由一名用户名为 $\text{Old Driver}$ 的CF用户在$\text{CF896C}$上首次使用，此人就是为你谷著名神犇、毒瘤出题者、<del>暴政</del>管理员 <font color=DarkViolet> $\text{lxl (noip)}$ </font></p>
+<p>是一种基于 $\text{std::set}$ 的暴力数据结构</p>
+<p><img src="https://img-service.csdnimg.cn/img_convert/65e2372d0cf6a0a465b9360ead71867c.png" alt=""></p>
+<h1 id="珂朵莉树的使用"><a href="#珂朵莉树的使用" class="headerlink" title="珂朵莉树的使用"></a>珂朵莉树的使用</h1><p>在数据随机的情况下使用，使一整段区间内的东西变得一样</p>
+<h1 id="珂朵莉树的构造"><a href="#珂朵莉树的构造" class="headerlink" title="珂朵莉树的构造"></a>珂朵莉树的构造</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line">set&lt;Node&gt; s;</span><br></pre></td></tr></table></figure>
+<p>这是一个没有初始化的珂朵莉树</p>
+<h1 id="珂朵莉树的初始化"><a href="#珂朵莉树的初始化" class="headerlink" title="珂朵莉树的初始化"></a>珂朵莉树的初始化</h1><p>一般来说，我们通过给定数据，向其中不断插入区间长度为1的区间来完成初始化</p>
+<p>For example: $\text{ CF896C }$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l, r;   <span class="comment">//范围</span></span><br><span class="line">    <span class="keyword">mutable</span> LL v;   <span class="comment">//数值</span></span><br><span class="line">    <span class="built_in">node</span>(<span class="keyword">int</span> L, <span class="keyword">int</span> R = <span class="number">-1</span>, LL V = <span class="number">0</span>) : <span class="built_in">l</span>(L), <span class="built_in">r</span>(R), <span class="built_in">v</span>(V) &#123;&#125;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> node &amp;o) <span class="keyword">const</span>   <span class="comment">//重载运算符</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> l &lt; o.l;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>表示 $\text{ l, r }$ 这一个区间中所有的数都是$\text{v}$</p>
+<h2 id="读入"><a href="#读入" class="headerlink" title="读入"></a>读入</h2><p>开一个$\text{set}$存$\text{Node}$，$\text{Node}$根据输入而定</p>
+<h1 id="珂朵莉树的宏定义"><a href="#珂朵莉树的宏定义" class="headerlink" title="珂朵莉树的宏定义"></a>珂朵莉树的宏定义</h1><p>更方便</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S_IT set<span class="meta-string">&lt;Node&gt;</span>::iterator <span class="comment">//S_IT = set_iterator</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="珂朵莉树的核心操作：-text-Split（分裂）"><a href="#珂朵莉树的核心操作：-text-Split（分裂）" class="headerlink" title="珂朵莉树的核心操作：$\text{Split（分裂）}$"></a>珂朵莉树的核心操作：$\text{Split（分裂）}$</h1><p>一个集合中，有一部分需要修改，而另一部分不需要修改，就把集合拆开，拆成两部分</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">IT <span class="title">split</span><span class="params">(<span class="keyword">int</span> pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT it = s.<span class="built_in">lower_bound</span>(<span class="built_in">node</span>(pos));       <span class="comment">//找到首个不小于pos的set</span></span><br><span class="line">    <span class="keyword">if</span> (it != s.<span class="built_in">end</span>() &amp;&amp; it-&gt;l == pos)</span><br><span class="line">    &#123;                                       <span class="comment">//无需，直接返回</span></span><br><span class="line">        <span class="keyword">return</span> it;</span><br><span class="line">    &#125;</span><br><span class="line">    --it;                                   <span class="comment">//否则一定在前一个区间中</span></span><br><span class="line">    <span class="keyword">int</span> L = it-&gt;l, R = it-&gt;r;               <span class="comment">//【l,r】就是要分裂的区间</span></span><br><span class="line">    LL V = it-&gt;v;                           <span class="comment">//取出值</span></span><br><span class="line">    s.<span class="built_in">erase</span>(it);                            <span class="comment">//删除原集合</span></span><br><span class="line">    s.<span class="built_in">insert</span>(<span class="built_in">node</span>(L, pos - <span class="number">1</span>, V));          <span class="comment">//构建前半段的新结合</span></span><br><span class="line">    <span class="keyword">return</span> s.<span class="built_in">insert</span>(<span class="built_in">node</span>(pos, R, V)).first; <span class="comment">//构建后半段的新集合并且返回地址</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="珂朵莉树的推平"><a href="#珂朵莉树的推平" class="headerlink" title="珂朵莉树的推平"></a>珂朵莉树的推平</h1><p>降低复杂度，接近 ${mLog_{n}}$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">assign_val</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, LL val)</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">assign_val</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, LL val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT itl = <span class="built_in">split</span>(r+<span class="number">1</span>), itr = <span class="built_in">split</span>(l); <span class="comment">//求出要被摊平区间的收尾地址</span></span><br><span class="line">    s.<span class="built_in">erase</span>(itl, itr);                     <span class="comment">//删除原集合</span></span><br><span class="line">    s.<span class="built_in">insert</span>(<span class="built_in">node</span>(l, r, val));             <span class="comment">//添加新集合</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h1><h2 id="区间加"><a href="#区间加" class="headerlink" title="区间加"></a>区间加</h2><p>找到对应集合暴力加</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, LL val)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT itl = <span class="built_in">split</span>(l), itr = <span class="built_in">split</span>(r + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (; itl != itr; ++itl)</span><br><span class="line">        itl-&gt;v += val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间第-k-小"><a href="#区间第-k-小" class="headerlink" title="区间第$k$小"></a>区间第$k$小</h2><p>把元素取出，暴力排序，暴力查找第k小（乘上集合的个数）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">rank</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;pair&lt;LL, <span class="keyword">int</span>&gt;&gt; vp;</span><br><span class="line">    IT itl = <span class="built_in">split</span>(l), itr = <span class="built_in">split</span>(r + <span class="number">1</span>);</span><br><span class="line">    vp.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">for</span> (; itl != itr; ++itl)</span><br><span class="line">        vp.<span class="built_in">push_back</span>(pair&lt;LL, <span class="keyword">int</span>&gt;(itl-&gt;v, itl-&gt;r - itl-&gt;l + <span class="number">1</span>));</span><br><span class="line">    <span class="built_in">sort</span>(vp.<span class="built_in">begin</span>(), vp.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span> (vector&lt;pair&lt;LL, <span class="keyword">int</span>&gt;&gt;::iterator it = vp.<span class="built_in">begin</span>(); it != vp.<span class="built_in">end</span>(); ++it)</span><br><span class="line">    &#123;</span><br><span class="line">        k -= it-&gt;second;</span><br><span class="line">        <span class="keyword">if</span> (k &lt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> it-&gt;first;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="区间幂次和"><a href="#区间幂次和" class="headerlink" title="区间幂次和"></a>区间幂次和</h2><p>暴力找到元素，快速幂，加入答案（乘上集合的个数）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LL <span class="title">pown</span><span class="params">(LL a, LL b, LL mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL res = <span class="number">1</span>;</span><br><span class="line">    LL ans = a % mod;</span><br><span class="line">    <span class="keyword">while</span> (b)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>)</span><br><span class="line">            res = res * ans % mod;</span><br><span class="line">        ans = ans * ans % mod;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">sum</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> ex, <span class="keyword">int</span> mod)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IT itl = <span class="built_in">split</span>(l), itr = <span class="built_in">split</span>(r + <span class="number">1</span>);</span><br><span class="line">    LL res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (; itl != itr; ++itl)</span><br><span class="line">        res = (res + (LL)(itl-&gt;r - itl-&gt;l + <span class="number">1</span>) * <span class="built_in">pown</span>(itl-&gt;v, <span class="built_in">LL</span>(ex), <span class="built_in">LL</span>(mod))) % mod;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     <div>
       
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+    
+</div>
+      
     </div>
 
 
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Wincer
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wincer.icu/p/ODT.html" title="珂朵莉树学习笔记">http://wincer.icu/p/ODT.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91/" rel="tag"># 珂朵莉树</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/Hexo-Guide.html" rel="prev" title="Hexo博客搭建全面指南+基于NexT的优化">
+      <i class="fa fa-chevron-left"></i> Hexo博客搭建全面指南+基于NexT的优化
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/Hello,World!.html" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
 
 
-  
-
-
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -618,6 +442,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">珂朵莉树是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">珂朵莉树的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0"><span class="nav-number">3.</span> <span class="nav-text">珂朵莉树的构造</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">珂朵莉树的初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%85%A5"><span class="nav-number">4.1.</span> <span class="nav-text">读入</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E7%9A%84%E5%AE%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">5.</span> <span class="nav-text">珂朵莉树的宏定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E7%9A%84%E6%A0%B8%E5%BF%83%E6%93%8D%E4%BD%9C%EF%BC%9A-text-Split%EF%BC%88%E5%88%86%E8%A3%82%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">珂朵莉树的核心操作：$\text{Split（分裂）}$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8F%82%E6%9C%B5%E8%8E%89%E6%A0%91%E7%9A%84%E6%8E%A8%E5%B9%B3"><span class="nav-number">7.</span> <span class="nav-text">珂朵莉树的推平</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C"><span class="nav-number">8.</span> <span class="nav-text">其他操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E9%97%B4%E5%8A%A0"><span class="nav-number">8.1.</span> <span class="nav-text">区间加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E9%97%B4%E7%AC%AC-k-%E5%B0%8F"><span class="nav-number">8.2.</span> <span class="nav-text">区间第$k$小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E9%97%B4%E5%B9%82%E6%AC%A1%E5%92%8C"><span class="nav-number">8.3.</span> <span class="nav-text">区间幂次和</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
