@@ -14,11 +14,15 @@
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Noto Sans JP:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wincer.icu","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#836FFF","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"wincer.icu","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#836FFF","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
+
+
 
   <meta name="description" content="$\text{Hexo}$ 是一个优秀的轻量级博客系统，本身可以兼容各种功能 而 $\text{NexT}$，则是一个集成有非常多功能、并且兼容性极好 因此本文选择了 $\text{Hexo+NexT}$ 的搭配">
 <meta property="og:type" content="article">
@@ -50,7 +54,7 @@
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/08/46f82ef18b29ce20.png">
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/08/4efceeb912d4b27f.png">
 <meta property="article:published_time" content="2021-08-06T01:51:34.000Z">
-<meta property="article:modified_time" content="2021-08-19T13:17:00.851Z">
+<meta property="article:modified_time" content="2021-08-20T13:48:16.531Z">
 <meta property="article:author" content="Wincer">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -261,7 +265,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-19 21:17:00" itemprop="dateModified" datetime="2021-08-19T21:17:00+08:00">2021-08-19</time>
+                <time title="修改时间：2021-08-20 21:48:16" itemprop="dateModified" datetime="2021-08-20T21:48:16+08:00">2021-08-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -333,10 +337,15 @@
 <p>选择 $\text{LTS}$ 版本即可</p>
 <p>这样一来，就可以使用<code>Git Bash</code>来代替<code>cmd</code>了</p>
 <h2 id="3-安装-text-Hexo"><a href="#3-安装-text-Hexo" class="headerlink" title="3. 安装 $\text{Hexo}$"></a>3. 安装 $\text{Hexo}$</h2><p>你需要在Git Bash中使用此命令安装Hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br>然后使用 <code>hexo -v</code> 查看版本验证安装</p>
-<p>之后初始化Hexo并且创建存储博客本地文件的文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog    //初始化</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><figcaption><span>处是你的博客本地文件夹的名字，写什么都可以</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">然后执行下面的命令</span><br><span class="line">```bash</span><br><span class="line">cd myblog   //进入这个myblog文件夹</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
-<font color=Orange>注意这些命令只能一次输入一条。粘贴可在Git Bash窗口右键或者 ```Shift+Ins``` </font>
+<p>之后初始化Hexo并且创建存储博客本地文件的文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog    </span><br></pre></td></tr></table></figure></p>
+<p>注意<code>myblog</code> 处是你的博客本地文件夹的名字，写什么都可以</p>
+<p>然后执行下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myblog   //进入这个myblog文件夹</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<font color=Orange>注意这些命令只能一次输入一条。粘贴可在Git Bash窗口右键或者 Shift+Ins </font>
 
-
+<hr>
+<h3 id="2021-08-02-UPD"><a href="#2021-08-02-UPD" class="headerlink" title="2021.08.02 UPD:"></a>2021.08.02 UPD:</h3><p>可以先建好文件夹然后右键Git Bash Here</p>
+<hr>
 <p>因为自带 $\text{Landscape}$ 主题，因此这个时候就可看到你的博客了！</p>
 <p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fupload-images.jianshu.io%2Fupload_images%2F15934130-2f1f347b172a7107.jpg%3FimageMogr2%2Fauto-orient%2Fstrip%257CimageView2%2F2%2Fw%2F1240&amp;refer=http%3A%2F%2Fupload-images.jianshu.io&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1631158843&amp;t=34a22477a057a0c3041d578f5f847012" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate   //可以缩写成 hexo g</span><br><span class="line">hexo server     //可以缩写成 hexo s</span><br></pre></td></tr></table></figure>
@@ -564,8 +573,8 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/p/ODT.html" rel="next" title="珂朵莉树学习笔记">
-      珂朵莉树学习笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/p/VMware-Install-Guide.html" rel="next" title="VMWare虚拟机滥用指南">
+      VMWare虚拟机滥用指南 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -626,7 +635,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">第一部分： $\text{Hexo}$ 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9A-%E9%85%8D%E7%BD%AE-text-Hexo"><span class="nav-number">2.</span> <span class="nav-text">第二部分： 配置 $\text{Hexo}$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-text-Git"><span class="nav-number">2.1.</span> <span class="nav-text">1. 安装 $\text{Git}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85-text-Node-JS"><span class="nav-number">2.2.</span> <span class="nav-text">2. 安装 $\text{Node.JS}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85-text-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">3. 安装 $\text{Hexo}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA-text-GitHub-%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.4.</span> <span class="nav-text">4. 创建 $\text{GitHub}$个人仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%94%9F%E6%88%90-text-SSH-%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0-text-GitHub"><span class="nav-number">2.5.</span> <span class="nav-text">5. 生成 $\text{SSH}$ 并添加到 $\text{GitHub}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%B0%86-text-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0"><span class="nav-number">2.6.</span> <span class="nav-text">6. 将 $\text{Hexo}$ 部署到</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">第三部分： $\text{Hexo}$ 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%AB%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="nav-number">3.1.</span> <span class="nav-text">1. 设置网站的基本框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Page%EF%BC%88%E5%88%9B%E5%BB%BA%E6%96%B0%E9%A1%B5%E9%9D%A2%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">2. Page（创建新页面）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Draft%EF%BC%88%E8%8D%89%E7%A8%BF%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">3. Draft（草稿）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E4%BC%98%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">第四部分： $\text{Hexo}$ 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.</span> <span class="nav-text">1. 更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%86%85%E5%AE%B9"><span class="nav-number">4.1.3.</span> <span class="nav-text">其他内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%B7%BB%E5%8A%A0-text-RSS-%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD"><span class="nav-number">4.2.</span> <span class="nav-text">2. 添加 $\text{RSS}$ 订阅功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-text-feed-%E6%8F%92%E4%BB%B6"><span class="nav-number">4.2.1.</span> <span class="nav-text">安装$\text{feed}$插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.2.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E9%98%85"><span class="nav-number">4.2.3.</span> <span class="nav-text">订阅</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.</span> <span class="nav-text">3. 绑定个人域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E4%BD%A0%E9%9C%80%E8%A6%81%E6%9C%89%E4%B8%80%E4%B8%AA%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.1.</span> <span class="nav-text">首先你需要有一个域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96-text-IP-%E5%9C%B0%E5%9D%80"><span class="nav-number">4.3.2.</span> <span class="nav-text">获取 $\text{IP}$ 地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.3.</span> <span class="nav-text">解析域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text-GitHub-%E4%BB%93%E5%BA%93%E7%9A%84-text-custom-domain-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.4.</span> <span class="nav-text">$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-text-CNAME"><span class="nav-number">4.3.5.</span> <span class="nav-text">设置 $\text{CNAME}$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81"><span class="nav-number">4.4.</span> <span class="nav-text">4. 国内外分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-text-SEO-%E4%BC%98%E5%8C%96"><span class="nav-number">4.5.</span> <span class="nav-text">5. $\text{SEO}$ 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6SEO"><span class="nav-number">4.5.1.</span> <span class="nav-text">百度SEO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="nav-number">4.5.2.</span> <span class="nav-text">站点地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8F%90%E4%BA%A4"><span class="nav-number">4.5.3.</span> <span class="nav-text">百度主动提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-SEO"><span class="nav-number">4.5.4.</span> <span class="nav-text">Google SEO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93"><span class="nav-number">4.6.</span> <span class="nav-text">6. 更换字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E5%8A%9F%E8%83%BD"><span class="nav-number">5.</span> <span class="nav-text">第五部分： $\text{Hexo}$ 功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E5%8A%9F%E8%83%BD"><span class="nav-number">5.1.</span> <span class="nav-text">1. 添加音乐功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%96%87%E7%AB%A0%E5%BD%93%E4%B8%AD"><span class="nav-number">5.1.1.</span> <span class="nav-text">直接插入文章当中</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#text-iframe-%E6%A0%87%E7%AD%BE"><span class="nav-number">5.1.1.1.</span> <span class="nav-text">$\text{iframe}$标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text-JavaScript-%E6%A0%87%E7%AD%BE"><span class="nav-number">5.1.2.</span> <span class="nav-text">$\text{JavaScript}$标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-text-Hexo-tag-Aplayer-%E6%8F%92%E4%BB%B6"><span class="nav-number">5.1.3.</span> <span class="nav-text">使用$\text{Hexo-tag-Aplayer}$插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A1%B5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">5.1.4.</span> <span class="nav-text">主页音乐播放器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%AD%8C%E5%8D%95"><span class="nav-number">5.1.5.</span> <span class="nav-text">添加歌单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8D%95%E7%8B%AC%E7%9A%84%E5%81%9A%E4%B8%80%E4%B8%AA%E6%AD%8C%E5%8D%95%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.1.6.</span> <span class="nav-text">也可以单独的做一个歌单页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6"><span class="nav-number">5.2.</span> <span class="nav-text">2. 代码块一键复制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E4%BB%A3%E7%A0%81%E5%A4%8D%E5%88%B6%E6%A8%A1%E5%9D%97%E6%96%87%E4%BB%B6"><span class="nav-number">5.2.1.</span> <span class="nav-text">1. 新建代码复制模块文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%BC%95%E7%94%A8%E6%96%87%E4%BB%B6"><span class="nav-number">5.2.2.</span> <span class="nav-text">2. 引用文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%92%AE%E4%B8%8A%E6%98%BE%E7%A4%BA%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="nav-number">5.2.3.</span> <span class="nav-text">3. 添加按钮上显示的语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%9C%A8%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%BC%80%E5%85%B3"><span class="nav-number">5.2.4.</span> <span class="nav-text">4. 在主题配置文件中添加开关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E9%A1%B6%E9%83%A8%E5%8A%A0%E8%BD%BD%E6%9D%A1"><span class="nav-number">5.3.</span> <span class="nav-text">3. 添加顶部加载条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BF%AE%E6%94%B9%E5%BA%95%E9%83%A8%E6%A0%87%E7%AD%BE"><span class="nav-number">5.4.</span> <span class="nav-text">4. 修改底部标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%96%87%E6%9C%AC%E6%8F%90%E7%A4%BA"><span class="nav-number">5.5.</span> <span class="nav-text">5. 文本提示</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">第一部分： $\text{Hexo}$ 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9A-%E9%85%8D%E7%BD%AE-text-Hexo"><span class="nav-number">2.</span> <span class="nav-text">第二部分： 配置 $\text{Hexo}$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-text-Git"><span class="nav-number">2.1.</span> <span class="nav-text">1. 安装 $\text{Git}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85-text-Node-JS"><span class="nav-number">2.2.</span> <span class="nav-text">2. 安装 $\text{Node.JS}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%89%E8%A3%85-text-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">3. 安装 $\text{Hexo}$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2021-08-02-UPD"><span class="nav-number">2.3.1.</span> <span class="nav-text">2021.08.02 UPD:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA-text-GitHub-%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.4.</span> <span class="nav-text">4. 创建 $\text{GitHub}$个人仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%94%9F%E6%88%90-text-SSH-%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0-text-GitHub"><span class="nav-number">2.5.</span> <span class="nav-text">5. 生成 $\text{SSH}$ 并添加到 $\text{GitHub}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%B0%86-text-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0"><span class="nav-number">2.6.</span> <span class="nav-text">6. 将 $\text{Hexo}$ 部署到</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">第三部分： $\text{Hexo}$ 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%AB%99%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="nav-number">3.1.</span> <span class="nav-text">1. 设置网站的基本框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Page%EF%BC%88%E5%88%9B%E5%BB%BA%E6%96%B0%E9%A1%B5%E9%9D%A2%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">2. Page（创建新页面）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Draft%EF%BC%88%E8%8D%89%E7%A8%BF%EF%BC%89"><span class="nav-number">3.3.</span> <span class="nav-text">3. Draft（草稿）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E4%BC%98%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">第四部分： $\text{Hexo}$ 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.</span> <span class="nav-text">1. 更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="nav-number">4.1.2.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%86%85%E5%AE%B9"><span class="nav-number">4.1.3.</span> <span class="nav-text">其他内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%B7%BB%E5%8A%A0-text-RSS-%E8%AE%A2%E9%98%85%E5%8A%9F%E8%83%BD"><span class="nav-number">4.2.</span> <span class="nav-text">2. 添加 $\text{RSS}$ 订阅功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-text-feed-%E6%8F%92%E4%BB%B6"><span class="nav-number">4.2.1.</span> <span class="nav-text">安装$\text{feed}$插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.2.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A2%E9%98%85"><span class="nav-number">4.2.3.</span> <span class="nav-text">订阅</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.</span> <span class="nav-text">3. 绑定个人域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E4%BD%A0%E9%9C%80%E8%A6%81%E6%9C%89%E4%B8%80%E4%B8%AA%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.1.</span> <span class="nav-text">首先你需要有一个域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96-text-IP-%E5%9C%B0%E5%9D%80"><span class="nav-number">4.3.2.</span> <span class="nav-text">获取 $\text{IP}$ 地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.3.</span> <span class="nav-text">解析域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text-GitHub-%E4%BB%93%E5%BA%93%E7%9A%84-text-custom-domain-%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="nav-number">4.3.4.</span> <span class="nav-text">$\text{GitHub}$ 仓库的 $\text{custom domain}$ 绑定域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-text-CNAME"><span class="nav-number">4.3.5.</span> <span class="nav-text">设置 $\text{CNAME}$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81"><span class="nav-number">4.4.</span> <span class="nav-text">4. 国内外分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-text-SEO-%E4%BC%98%E5%8C%96"><span class="nav-number">4.5.</span> <span class="nav-text">5. $\text{SEO}$ 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6SEO"><span class="nav-number">4.5.1.</span> <span class="nav-text">百度SEO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="nav-number">4.5.2.</span> <span class="nav-text">站点地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8F%90%E4%BA%A4"><span class="nav-number">4.5.3.</span> <span class="nav-text">百度主动提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-SEO"><span class="nav-number">4.5.4.</span> <span class="nav-text">Google SEO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%9B%B4%E6%8D%A2%E5%AD%97%E4%BD%93"><span class="nav-number">4.6.</span> <span class="nav-text">6. 更换字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86%EF%BC%9A-text-Hexo-%E5%8A%9F%E8%83%BD"><span class="nav-number">5.</span> <span class="nav-text">第五部分： $\text{Hexo}$ 功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E5%8A%9F%E8%83%BD"><span class="nav-number">5.1.</span> <span class="nav-text">1. 添加音乐功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%96%87%E7%AB%A0%E5%BD%93%E4%B8%AD"><span class="nav-number">5.1.1.</span> <span class="nav-text">直接插入文章当中</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#text-iframe-%E6%A0%87%E7%AD%BE"><span class="nav-number">5.1.1.1.</span> <span class="nav-text">$\text{iframe}$标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text-JavaScript-%E6%A0%87%E7%AD%BE"><span class="nav-number">5.1.2.</span> <span class="nav-text">$\text{JavaScript}$标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-text-Hexo-tag-Aplayer-%E6%8F%92%E4%BB%B6"><span class="nav-number">5.1.3.</span> <span class="nav-text">使用$\text{Hexo-tag-Aplayer}$插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A1%B5%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">5.1.4.</span> <span class="nav-text">主页音乐播放器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%AD%8C%E5%8D%95"><span class="nav-number">5.1.5.</span> <span class="nav-text">添加歌单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8D%95%E7%8B%AC%E7%9A%84%E5%81%9A%E4%B8%80%E4%B8%AA%E6%AD%8C%E5%8D%95%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.1.6.</span> <span class="nav-text">也可以单独的做一个歌单页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%80%E9%94%AE%E5%A4%8D%E5%88%B6"><span class="nav-number">5.2.</span> <span class="nav-text">2. 代码块一键复制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA%E4%BB%A3%E7%A0%81%E5%A4%8D%E5%88%B6%E6%A8%A1%E5%9D%97%E6%96%87%E4%BB%B6"><span class="nav-number">5.2.1.</span> <span class="nav-text">1. 新建代码复制模块文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%BC%95%E7%94%A8%E6%96%87%E4%BB%B6"><span class="nav-number">5.2.2.</span> <span class="nav-text">2. 引用文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%92%AE%E4%B8%8A%E6%98%BE%E7%A4%BA%E7%9A%84%E8%AF%AD%E8%A8%80"><span class="nav-number">5.2.3.</span> <span class="nav-text">3. 添加按钮上显示的语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%9C%A8%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%BC%80%E5%85%B3"><span class="nav-number">5.2.4.</span> <span class="nav-text">4. 在主题配置文件中添加开关</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E9%A1%B6%E9%83%A8%E5%8A%A0%E8%BD%BD%E6%9D%A1"><span class="nav-number">5.3.</span> <span class="nav-text">3. 添加顶部加载条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BF%AE%E6%94%B9%E5%BA%95%E9%83%A8%E6%A0%87%E7%AD%BE"><span class="nav-number">5.4.</span> <span class="nav-text">4. 修改底部标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%96%87%E6%9C%AC%E6%8F%90%E7%A4%BA"><span class="nav-number">5.5.</span> <span class="nav-text">5. 文本提示</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -642,16 +651,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -695,6 +704,13 @@
 
       </div>
 
+      <!-- 音乐播放器 -->
+      <div>
+        
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1808492017&auto=1&height=66"></iframe>
+        
+      </div>
+
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -721,13 +737,52 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">13k</span>
+    <span title="站点总字数">14k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
     <span title="站点阅读时长">12 分钟</span>
 </div>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数
+        */
+		var t1 = Date.UTC(2020,03,17,06,03,17); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 已经元气满满地运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒！ ";
+	}
+	siteTime();
+</script>
 
         
 
@@ -957,6 +1012,13 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   }, window.Valine);
 });
 </script>
+
+
+  <!-- 樱花特效 -->
+  
+      <script async src="/js/src/sakura.js"></script>
+  
+
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
 </html>
