@@ -54,7 +54,7 @@
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/08/46f82ef18b29ce20.png">
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/08/4efceeb912d4b27f.png">
 <meta property="article:published_time" content="2021-08-06T01:51:34.000Z">
-<meta property="article:modified_time" content="2021-12-27T13:35:14.675Z">
+<meta property="article:modified_time" content="2022-03-30T13:15:07.926Z">
 <meta property="article:author" content="Wincer">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -270,7 +270,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-27 21:35:14" itemprop="dateModified" datetime="2021-12-27T21:35:14+08:00">2021-12-27</time>
+                <time title="修改时间：2022-03-30 21:15:07" itemprop="dateModified" datetime="2022-03-30T21:15:07+08:00">2022-03-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -363,7 +363,7 @@
 <figure class="highlight plaintext"><figcaption><span>就是你的GitHub用户名，```youremail``` 是你的GitHub的注册邮箱。这是Github用来验证账户的。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可以用下面的命令检查输入是否正确</span><br><span class="line">```bash</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
 <p>接下来创建SSH，全部点回车就可以了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C youremail</span><br></pre></td></tr></table></figure>
-<p>你会在大概会在C:\Users\Administrator中找到这个文件夹，记事本打开<code>id_rsa.pub</code>。</p>
+<p>你大概会在C:\Users\Administrator中找到这个文件夹，记事本打开<code>id_rsa.pub</code>。</p>
 <p>ssh，简单来讲，就是一个秘钥，其中，<code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
 <p>而后在GitHub的<code>setting</code>中，找到<code>SSH keys</code>的设置选项，点击<code>New SSH key</code><br>把你的<code>id_rsa.pub</code>里面的信息复制进去。</p>
 <p>用下面的代码验证 (无需改动)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
@@ -739,7 +739,7 @@
 <div class="copyright">
   
   &copy; 2020 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
