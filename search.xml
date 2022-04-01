@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>测试文件</title>
+      <link href="/p/text.html"/>
+      <url>/p/text.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Text-Only"><a href="#Text-Only" class="headerlink" title="Text Only"></a>Text Only</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2021年度总结</title>
       <link href="/p/2021-Annual-Summary.html"/>
       <url>/p/2021-Annual-Summary.html</url>
