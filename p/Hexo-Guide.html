@@ -54,7 +54,7 @@
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/08/46f82ef18b29ce20.png">
 <meta property="og:image" content="https://i.bmp.ovh/imgs/2021/08/4efceeb912d4b27f.png">
 <meta property="article:published_time" content="2021-08-06T01:51:34.000Z">
-<meta property="article:modified_time" content="2022-03-30T13:15:07.926Z">
+<meta property="article:modified_time" content="2022-04-01T07:28:24.960Z">
 <meta property="article:author" content="Wincer">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -270,7 +270,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-30 21:15:07" itemprop="dateModified" datetime="2022-03-30T21:15:07+08:00">2022-03-30</time>
+                <time title="修改时间：2022-04-01 15:28:24" itemprop="dateModified" datetime="2022-04-01T15:28:24+08:00">2022-04-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -367,7 +367,7 @@
 <p>ssh，简单来讲，就是一个秘钥，其中，<code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
 <p>而后在GitHub的<code>setting</code>中，找到<code>SSH keys</code>的设置选项，点击<code>New SSH key</code><br>把你的<code>id_rsa.pub</code>里面的信息复制进去。</p>
 <p>用下面的代码验证 (无需改动)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<h2 id="6-将-text-Hexo-部署到"><a href="#6-将-text-Hexo-部署到" class="headerlink" title="6. 将 $\text{Hexo}$ 部署到"></a>6. 将 $\text{Hexo}$ 部署到</h2><p>打开站点配置文件 <code>_config.yml</code>，翻到最后，修改<code>YourgithubName</code>为你的GitHub账户<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master（更新：后来因为黑命贵master改成main了，注意一下）</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="6-将-text-Hexo-部署到"><a href="#6-将-text-Hexo-部署到" class="headerlink" title="6. 将 $\text{Hexo}$ 部署到"></a>6. 将 $\text{Hexo}$ 部署到</h2><p>打开站点配置文件 <code>_config.yml</code>，翻到最后，修改<code>YourgithubName</code>为你的GitHub账户<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span>  <span class="comment"># 更新：现在GitHub默认为main，注意一下</span></span><br></pre></td></tr></table></figure></p>
 <p>安装 $\text{deploy-git}$ 部署工具以部署到 $\text{Github}$<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <p>然后执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      //清除之前生成的东西 缩写为hexo cl</span><br><span class="line">hexo generate   //生成静态文章 缩写为hexo g</span><br><span class="line">hexo deploy     //部署 缩写为hexo d</span><br></pre></td></tr></table></figure></p>
 <p>另外说一下，<strong>生成和部署</strong>可以合为 <code>hexo g -d</code> 。</p>
@@ -437,10 +437,10 @@
 <p>如果你的草稿文件写完了，想要发表到<code>post</code>中，下面的代码就会自动把<code>newpage.md</code>发送到<code>post</code>中。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish draft newpage</span><br></pre></td></tr></table></figure></p>
 <h1 id="第四部分：-text-Hexo-优化"><a href="#第四部分：-text-Hexo-优化" class="headerlink" title="第四部分： $\text{Hexo}$ 优化"></a>第四部分： $\text{Hexo}$ 优化</h1><h2 id="1-更换主题"><a href="#1-更换主题" class="headerlink" title="1. 更换主题"></a>1. 更换主题</h2><p>在这里，窝推荐两款主题</p>
 <ul>
-<li>$\text{Shana}$ <strong>非常优秀的二次元主题</strong>。缺点是集成的功能比较少，需要自己读代码写文件（开发者似乎大学毕业了，回issue回答比较慢），而且开发者的主要开发方向是PC端</li>
+<li>$\text{Shana}$ <strong>非常优秀的二次元主题</strong>。缺点是集成的功能比较少，需要自己读代码写文件（开发者似乎大学毕业了，回issue回的比较慢），而且开发者的主要开发方向是PC端</li>
 <li>$\text{NexT}$  <strong>非常优秀、功能极为强大、易于操作的主题</strong>。如果喜欢各种效果实现各种功能，选择这个会比较方便，移动端效果比较好</li>
 </ul>
-<p>由于我现在已经不用Shana主题了，所以用我正在用的NexT主题来说一下</p>
+<p>由于现在我已经不用Shana主题了，所以用我正在用的NexT主题来说一下</p>
 <p><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">NexT官方文档</a>  NexT是有中文文档的。参照官方文档即可</p>
 <h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><p>有两种方法下载NexT：使用git克隆最新版本和下载稳定版本的压缩包(.zip)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
 <h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><font color=red size=4>提前声明一下：```站点配置文件```是你博客根目录下的```_config.yml```文件，```主题配置文件```是next主题文件夹下的```_config.yml```文件</font>
@@ -467,8 +467,7 @@
 <p><img src="https://s1.ax1x.com/2020/08/07/ahwVQU.png" alt=""></p>
 <p>在里面填入你的域名</p>
 <p><img src="https://i.bmp.ovh/imgs/2021/08/a371e5b3ea311d99.png" alt=""></p>
-<h2 id="4-国内外分流"><a href="#4-国内外分流" class="headerlink" title="4. 国内外分流"></a>4. 国内外分流</h2><p>但是吧，这一点我并不会做，正在研究，过段时间会补上的。</p>
-<p>BFS吧</p>
+<h2 id="4-国内外分流"><a href="#4-国内外分流" class="headerlink" title="4. 国内外分流"></a>4. 国内外分流</h2><p>使用 Coding 或 Gitee 完成分流</p>
 <h2 id="5-text-SEO-优化"><a href="#5-text-SEO-优化" class="headerlink" title="5. $\text{SEO}$ 优化"></a>5. $\text{SEO}$ 优化</h2><p>首先需要让搜索引擎收录你的这个网站，别人才能搜索的到，那么这就需要SEO优化了</p>
 <blockquote>
 <p>SEO是由英文Search Engine Optimization缩写而来， 中文意译为“搜索引擎优化”。SEO是指通过站内优化比如网站结构调整、网站内容建设、网站代码优化等以及站外优化。</p>
@@ -656,7 +655,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
