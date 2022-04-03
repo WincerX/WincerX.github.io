@@ -135,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://wincer.space/tags/Hexo/</loc>
-    <lastmod>2022-04-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wincer.space/tags/VMWare/</loc>
     <lastmod>2022-04-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -162,17 +155,17 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://wincer.space/categories/%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://wincer.space/tags/Hexo/</loc>
     <lastmod>2022-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://wincer.space/categories/Hexo/</loc>
+    <loc>https://wincer.space/categories/%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2022-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -187,6 +180,13 @@
   
   <url>
     <loc>https://wincer.space/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wincer.space/categories/Hexo/</loc>
     <lastmod>2022-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
